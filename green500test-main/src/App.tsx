@@ -158,7 +158,7 @@ export default function App() {
 
       {/* Table */}
       <div className={`${view === "dashboard" ? "block" : "hidden"} apple-shell mt-6 mb-10 rounded-[22px] overflow-hidden`} style={{ background: "#ffffff", boxShadow: "0 1px 3px rgba(0,0,0,0.08), 0 0 0 0.5px rgba(0,0,0,0.06)" }}>
-        <div className="overflow-x-auto"><table className="w-full table-fixed border-collapse text-sm" style={{ minWidth: 1100 }}><colgroup><col style={{width:"6%"}}/><col style={{width:"20%"}}/><col style={{width:"16%"}}/><col style={{width:"20%"}}/><col style={{width:"12%"}}/><col style={{width:"12%"}}/><col style={{width:"12%"}}/><col style={{width:"2%"}}/></colgroup>
+        <div className="overflow-x-auto"><table className="w-full table-fixed border-collapse text-sm" style={{ minWidth: 1100 }}><colgroup><col style={{width:"5%"}}/><col style={{width:"20%"}}/><col style={{width:"19%"}}/><col style={{width:"18%"}}/><col style={{width:"12%"}}/><col style={{width:"12%"}}/><col style={{width:"12%"}}/><col style={{width:"2%"}}/></colgroup>
           <thead>
             <tr style={{ borderBottom: "0.5px solid rgba(0,0,0,0.08)", background: "#fafafa" }}>
               <th className="text-left px-4 py-3 cursor-pointer select-none" style={{ color: "#86868b", fontSize: 11, fontWeight: 600, letterSpacing: "0.04em", width: 70 }} >
@@ -177,10 +177,10 @@ export default function App() {
                 ENVIRONMENTAL
               </th>
               <th className="text-left px-4 py-3" style={{ color: "#86868b", fontSize: 11, fontWeight: 600, letterSpacing: "0.04em", minWidth: 100 }}>
-                SOCIAL
+                FINANCIAL
               </th>
               <th className="text-left px-4 py-3" style={{ color: "#86868b", fontSize: 11, fontWeight: 600, letterSpacing: "0.04em", minWidth: 100 }}>
-                FINANCIAL
+                SOCIAL
               </th>
               <th style={{ width: 20 }} />
             </tr>
@@ -218,8 +218,8 @@ export default function App() {
                   {/* Sector */}
                   <td className="px-4 py-3">
                     <span
-                      className="text-[12px] px-2 py-0.5 rounded-full font-medium"
-                      style={{ background: `${sColor}12`, color: sColor }}
+                      className="inline-flex whitespace-nowrap text-[12px] px-2 py-0.5 rounded-full font-medium"
+                      style={{ background: `${sColor}12`, color: sColor, lineHeight: 1.5 }}
                     >
                       {company.sector}
                     </span>
