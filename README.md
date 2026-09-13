@@ -35,6 +35,18 @@ saves company JSON for the results builder. Scores use extracted observations,
 never materiality ratings. The existing example records retain their original
 reviewed-mapping provenance; they have not been re-extracted by the model yet.
 
+## Web interfaces
+
+- `/` serves the Green500 React dashboard, including the sustainability index,
+  personal allocation view and net-zero fund view.
+- `/data` preserves the authenticated source-and-evidence interface, including
+  report coverage, extracted results, source documents and data downloads.
+- `/api/*` remains the FastAPI data layer used by the source interface and by
+  future dashboard integrations.
+
+The React source lives in `frontend/`. `npm run build` compiles both the existing
+TypeScript interface and the React dashboard into `green500/static/dashboard/`.
+
 ## Analysis code and prompts
 
 All category instructions are adjacent in [analysis_prompts.py](analysis_prompts.py):
