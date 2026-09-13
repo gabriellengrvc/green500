@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "test": "npm run build",
-    "build": "tsc green500/static/app.ts --target ES2021 --lib ES2021,DOM --strict --noEmitOnError --outDir green500/static"
+    "build": "npm run build:legacy && npm run build:dashboard",
+    "build:legacy": "tsc green500/static/app.ts --target ES2021 --lib ES2021,DOM --strict --noEmitOnError --outDir green500/static",
+    "build:dashboard": "npm --prefix frontend ci && npm --prefix frontend run build"
   },
   "keywords": [],
   "author": "",
