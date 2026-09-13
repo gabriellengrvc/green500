@@ -228,3 +228,42 @@ dialog::backdrop { background: rgb(18 27 22 / 48%); backdrop-filter: blur(2px); 
 .source-freshness.latest_verified { color: #18724b; }
 .source-freshness.newer_available, .source-assessment { color: #83591e; }
 .source-assessment { font-size: 12px; line-height: 1.45; margin: 6px 0 0; }
+
+/* Shared visual language with the React dashboard. */
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  color: #1d1d1f;
+  background: #f5f5f7;
+}
+body { background: #f5f5f7; -webkit-font-smoothing: antialiased; }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-color: rgb(0 0 0 / 8%);
+  background: rgb(255 255 255 / 86%);
+  box-shadow: 0 1px 0 rgb(0 0 0 / 3%);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.brand-mark { color: #fff; background: #79ab52; font-family: inherit; font-weight: 700; }
+.brand h1, .company-cell strong, .industry-cell strong { color: #1d1d1f; }
+a { color: #4d7f39; }
+input, select, button, .button-link {
+  border-color: rgb(0 0 0 / 9%);
+  border-radius: 10px;
+  color: #1d1d1f;
+}
+button.primary { border-color: #79ab52; background: #79ab52; }
+button:hover, .button-link:hover { background: #f5f5f7; }
+.login-card, .catalog {
+  border-color: rgb(0 0 0 / 7%);
+  border-radius: 22px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 4%);
+}
+th { color: #86868b; background: #fafafa; }
+th, td { border-color: rgb(0 0 0 / 6%); }
+.company-row:hover { background: #f7f7f9; }
+.coverage-button.ready { color: #416f2f; background: #edf5e8; }
+.processing-button.completed, .source-freshness.latest_verified { color: #4d7f39; }
+dialog { border-radius: 22px; color: #1d1d1f; box-shadow: 0 28px 80px rgb(0 0 0 / 22%); }
+button, a, input, select { transition: background-color 240ms ease, border-color 240ms ease, color 240ms ease; }
