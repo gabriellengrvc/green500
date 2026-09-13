@@ -87,7 +87,14 @@ def authorize(request: Request, authorization: str = Header(default="")) -> None
 
 @app.get("/")
 def index():
-    """Serve the company table without exposing configuration secrets."""
+    """Serve the public Green500 dashboard."""
+    return FileResponse(STATIC_DIR / "dashboard/index.html")
+
+
+@app.get("/data")
+@app.get("/data/")
+def data_portal():
+    """Preserve the authenticated source and evidence interface."""
     return FileResponse(STATIC_DIR / "index.html")
 
 
